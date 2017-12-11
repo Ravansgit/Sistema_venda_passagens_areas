@@ -1,0 +1,38 @@
+<%@page import="com.domain.web.User"%>
+<%@page import="com.domain.web.Database"%>
+<%@ page pageEncoding="UTF-8" %>
+<%
+    if(request.getParameter("do-logoff")!= null){
+        session.removeAttribute("me.id");
+        session.removeAttribute("me.name");
+        session.removeAttribute("me.login");
+        session.removeAttribute("me.passwordHash");
+        response.sendRedirect(request.getContextPath()+"/home.jsp");
+    }
+%>
+<h1>Venda de passgem areas.</h1>
+    <nav class="navbar  fixed-top" >
+    <%if(session.getAttribute("me.login")!=null){%>
+        <h1 class="navbar-header">
+                <a href="home.jsp"class="navbar-brand" style="color: #fff;">VENDA DE PASSAGENS AEREAS ONLINE</a>
+
+            </h1> 
+            <form>
+                Bem vindo, <%=session.getAttribute("me.name")%>!
+                <input type="submit" name="do-logoff" value="Sair"/>
+            </form>
+        <ul class="nav nav-default">
+            <li class="nav-item"><a href="cadastro.jsp" class="nav-link" style="color: #fff;">CADASTRO</a></li>
+            <li class="nav-item"><a href="destino_ida.jsp" class="nav-link" style="color: #fff;">PASSAGEM DE IDA</a></li>
+            <li class="nav-item"><a href="compra_passagens.jsp" class="nav-link"style="color: #fff;">PASSAGEM </a></li>
+            <li class="nav-item"><a href="pacotes.jsp" class="nav-link" style="color: #fff;">PACOTES</a></li>
+            <li class="nav-item"><a href="pagamento.jsp" class="nav-link" style="color: #fff;">PAGAMENTO</a></li>
+        </ul>
+    <%}%>
+        <%if(Database.getConnectionException()!=null){%>
+            <div style="color: red;">
+                Erro ao tentar conexão com o banco de dados:
+                <%=Database.getConnectionException().getMessage()%>
+            </div>
+        <%}%>
+    </nav>

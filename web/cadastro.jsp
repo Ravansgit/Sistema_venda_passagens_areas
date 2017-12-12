@@ -10,7 +10,7 @@
     <body>
         <%@include file = "WEB-INF/jspf/header.jspf"%> 
         <main class="container" style="margin-top: 10%;">
-            <h2>Cadastre-se</h2>
+            <h2>CADASTRE-SE</h2>
             <form method="post" class="form-horizontal">
                 <label class="col-md-7">Nome Completo:
                     <input type="text" name="nome_completo"  class="form-control"/>

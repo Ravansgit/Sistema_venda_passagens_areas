@@ -19,10 +19,13 @@
             <h2>PACOTES DISPONIVEIS</h2>
             <table class="table table-striped table-dark">
                 <tr>
-                    <th scope="col">df</th>
-                    <th scope="col">df</th>
-                    <th scope="col">fd</th>
-                    <th scope="col">klgkj</th>
+                    <th scope="col">ORIGEM</th>
+                    <th scope="col">DATA DE IDA</th>
+                    <th scope="col">DESTINO</th>
+                    <th scope="col">DATA DE VOLTA</th>
+                    <th scope="col">CATEGORIA</th>
+                    <th scope="col">PREÇO</th>
+                    <th scope="col">COMPRAR</th>
                     
                 </tr>
                 <tr scope="row">
@@ -30,18 +33,9 @@
                     <td>etw</td>
                     <td>etw</td>
                     <td>etw</td>
-                </tr>
-                <tr scope="row">
                     <td>etw</td>
                     <td>etw</td>
-                    <td>etw</td>
-                    <td>etw</td>
-                </tr>
-                <tr scope="row">
-                    <td>etw</td>
-                    <td>etw</td>
-                    <td>etw</td>
-                    <td>etw</td>
+                    <td><a href="https://pagseguro.uol.com.br/#rmcl"><button class="btn align-middle btn-light">Comprar </button></a></td>
                 </tr>
             </table>
         </main>
